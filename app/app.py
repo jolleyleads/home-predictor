@@ -1,24 +1,24 @@
 ﻿from flask import Flask, request, jsonify
 import os
 import joblib
-import pandas as pd
 
-app = Flask(__name__)
+# --- MODEL PATH (robust for local + Render) ---
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # repo root
+DEFAULT_MODEL_PATH = os.path.join(BASE_DIR, "models", "model.joblib")
+MODEL_PATH = os.environ.get("MODEL_PATH", DEFAULT_MODEL_PATH)
 
-# Always resolve paths relative to THIS file (deploy-safe)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MODEL_PATH = os.path.join(BASE_DIR, "models", "model.joblib")
-
-_model = None
+model = None
 
 def load_model():
-    global _model
-    if _model is not None:
-        return _model
-    if os.path.exists(MODEL_PATH):
-        _model = joblib.load(MODEL_PATH)
-        return _model
-    return None
+    global model
+    if model is not None:
+        return model
+
+    if not os.path.exists(MODEL_PATH):
+        raise FileNotFoundError(f"Model not found at: {MODEL_PATH}")
+
+    model = joblib.load(MODEL_PATH)
+    return model
 
 HOME_HTML = """
 <!doctype html>
