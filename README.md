@@ -46,3 +46,48 @@ python app.py
 ## Author
 Matthew Jolley
 https://github.com/jolleyleads
+
+## System Architecture
+
+User Input
+?
+Flask Web App
+?
+Data Preprocessing
+?
+Trained Regression Model
+?
+Price Prediction
+?
+Result Displayed in Browser
+
+## Machine Learning Workflow
+
+1. Collected structured housing data
+2. Cleaned and prepared the dataset
+3. Selected relevant property features
+4. Trained a regression model
+5. Saved the trained model for reuse
+6. Connected the model to a Flask web app
+7. Deployed the app online with Render
+
+## Deployment
+
+This project is deployed using Render.
+
+Live App:
+https://home-predictor.onrender.com/
+
+## Skills Demonstrated
+
+- End-to-end machine learning development
+- Regression modeling
+- Flask application development
+- Python project structuring
+- Model deployment
+- GitHub version control
+- Business-focused AI application design
+
+## Resume Bullet
+
+Built and deployed a Flask-based home price prediction application using Python and machine learning regression, turning structured housing data into a user-facing web app for real estate valuation support.
