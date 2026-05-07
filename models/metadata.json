@@ -1,0 +1,14 @@
+{
+  "features_num": [
+    "bedrooms",
+    "bathrooms",
+    "square_feet"
+  ],
+  "features_cat": [
+    "zipcode"
+  ],
+  "target": "price",
+  "rows": 8,
+  "mae": 27794.712875705096,
+  "rmse": 27944.023904055743
+}
