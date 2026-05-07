@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import os
+=======
+>>>>>>> a1d9516b99133ebcc85e43a52c950cc031947c72
 import pandas as pd
 
 REQUIRED_COLS = ["price", "bedrooms", "bathrooms", "square_feet", "zipcode"]
@@ -48,5 +51,9 @@ def load_and_clean(raw_path: str, cleaned_path: str) -> pd.DataFrame:
     return df
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     load_and_clean(os.path.join("data","RAW.csv"), os.path.join("data","cleaned.csv"))
+=======
+    load_and_clean("data/raw.csv", "data/cleaned.csv")
+>>>>>>> a1d9516b99133ebcc85e43a52c950cc031947c72
     print("Saved cleaned dataset to data/cleaned.csv")

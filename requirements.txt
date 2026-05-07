@@ -1,5 +1,14 @@
+<<<<<<< HEAD
 flask==3.0.3
 pandas==2.2.2
 numpy==2.0.1
 scikit-learn==1.5.1
 joblib==1.4.2
+=======
+﻿flask==3.1.2
+gunicorn==22.0.0
+pandas==2.2.2
+numpy==2.0.1
+joblib==1.4.2
+scikit-learn==1.5.1
+>>>>>>> a1d9516b99133ebcc85e43a52c950cc031947c72
